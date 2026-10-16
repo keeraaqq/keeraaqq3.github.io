@@ -8,10 +8,8 @@
 </head>
 <body id="top">
 
-    <!-- ============ ШАПКА ============ -->
     <header id="site-header">
         <div class="container header-inner">
-
             <a href="#top" class="logo-link" aria-label="На главную">
                 <img class="logo"
                      src="https://i.pinimg.com/originals/12/d1/e0/12d1e030eec92d2c3030173a27576615.jpg"
@@ -19,9 +17,7 @@
                      onerror="this.hidden=true; this.nextElementSibling.classList.add('is-visible');">
                 <span class="logo logo-fallback">A</span>
             </a>
-
             <a href="#top" class="site-title">Задание 3</a>
-
             <nav id="site-nav">
                 <ul class="menu">
                     <li><a href="#links">Ссылки</a></li>
@@ -29,19 +25,12 @@
                     <li><a href="#form">Форма</a></li>
                 </ul>
             </nav>
-
         </div>
     </header>
 
-    <!-- ============ ОСНОВНОЙ КОНТЕНТ ============ -->
     <main class="container">
-
         <h1>Задание 3. Адаптивная вёрстка</h1>
-
-        <!-- Flex-контейнер: на смартфоне порядок блоков меняется через order -->
         <div id="content">
-
-            <!-- ---------- Список гиперссылок ---------- -->
             <section id="links" class="content-block">
                 <h2>Список гиперссылок</h2>
                 <ul>
@@ -138,38 +127,31 @@
         </table>
     </div>
 </section>
-            <!-- ---------- Форма ---------- -->
             <section id="form" class="content-block">
                 <h2>Форма</h2>
-
                 <form id="myForm">
                     <fieldset>
                         <legend>Личные данные</legend>
-
                         <p>
                             <label for="fullname">1. ФИО:</label><br>
                             <input type="text" id="fullname" name="fullname" placeholder="Иванов Иван Иванович">
                             <span id="error-fullname" class="error-text"></span>
                         </p>
-
                         <p>
                             <label for="phone">2. Телефон:</label><br>
                             <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
                             <span id="error-phone" class="error-text"></span>
                         </p>
-
                         <p>
                             <label for="email">3. E-mail:</label><br>
                             <input type="email" id="email" name="email" placeholder="example@mail.ru">
                             <span id="error-email" class="error-text"></span>
                         </p>
-
                         <p>
                             <label for="birthdate">4. Дата рождения:</label><br>
                             <input type="date" id="birthdate" name="birthdate">
                             <span id="error-birthdate" class="error-text"></span>
                         </p>
-
                         <p>
                             <span class="field-title">5. Пол:</span><br>
                             <span id="gender-group">
@@ -179,10 +161,8 @@
                             <span id="error-gender" class="error-text"></span>
                         </p>
                     </fieldset>
-
                     <fieldset>
                         <legend>Дополнительная информация</legend>
-
                         <p>
                             <label for="lang">6. Любимый язык программирования:</label><br>
                             <select id="lang" name="languages[]" multiple size="6">
@@ -201,13 +181,11 @@
                             <span id="error-lang" class="error-text"></span>
                             <br><small class="hint">Зажмите Ctrl (или Cmd) чтобы выбрать несколько</small>
                         </p>
-
                         <p>
                             <label for="bio">7. Биография:</label><br>
                             <textarea id="bio" name="bio" rows="5" cols="40" placeholder="Расскажите о себе..."></textarea>
                             <span id="error-bio" class="error-text"></span>
                         </p>
-
                         <p>
                             <label>
                                 <input type="checkbox" id="contract" name="contract" value="yes">
@@ -215,32 +193,24 @@
                             </label>
                             <span id="error-contract" class="error-text"></span>
                         </p>
-
                         <p>
                             <button type="button" onclick="validateForm()">9. Сохранить</button>
                         </p>
                     </fieldset>
                 </form>
             </section>
-
         </div>
-
         <h2 id="bottom">Конец страницы</h2>
         <p><a href="#top">Наверх</a></p>
-
     </main>
-
-    <!-- ============ ПОДВАЛ ============ -->
     <footer id="site-footer">
         <div class="container">
             &copy; Авдошина Мария
         </div>
     </footer>
-
     <script>
         function validateForm() {
             let isValid = true;
-
             document.querySelectorAll('.error-text').forEach(el => {
                 el.style.display = 'none';
                 el.textContent = '';
